@@ -35,21 +35,24 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
+                include: PATHS.src,
+                loaders: [
+                    'style-loader',
+                    'css-loader?sourceMap',
+                    'sass-loader?sourceMap'
+                ]
             }
         ]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-
+        new webpack.optimize.CommonsChunkPlugin({
+            names: [ 'vendor' ]
+        }),
         new HtmlwebpackPlugin({
             title: 'CALsera',
             inject: false,
             template: './src/index.html'
-        }),
-
-        new webpack.optimize.CommonsChunkPlugin({
-            names: [ 'vendor' ]
         })
     ]
 };
