@@ -1,0 +1,19 @@
+{
+  "name": "calsera",
+  "version": "0.0.1",
+  "description": "A calendar and schedule for your Coursera courses",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvbsanjose/calsera.git"
+  },
+  "author": "Richard VanBreemen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rvbsanjose/calsera/issues"
+  },
+  "homepage": "https://github.com/rvbsanjose/calsera#readme"
+}
