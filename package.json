@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rvbsanjose/calsera/issues"
   },
-  "homepage": "https://github.com/rvbsanjose/calsera#readme"
+  "homepage": "https://github.com/rvbsanjose/calsera#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
