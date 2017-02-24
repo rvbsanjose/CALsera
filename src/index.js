@@ -1,12 +1,6 @@
+import './main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Calsera from './containers/calsera/calseraContainer.jsx';
 
-import './main.scss';
-
-class Test extends React.Component {
-    render() {
-        return <div>Webpack set up correctly!</div>
-    }
-}
-
-ReactDOM.render(<Test />, document.querySelector('#calsera-app'));
+ReactDOM.render(<Calsera />, document.querySelector('#calsera-app'));
