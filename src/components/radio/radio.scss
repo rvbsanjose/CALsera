@@ -1,0 +1,10 @@
+.radio-container {
+  display: flex;
+  margin: 0 10px;
+  align-items: center;
+  text-transform: capitalize;
+
+  input {
+    margin-right: 5px;
+  }
+}
