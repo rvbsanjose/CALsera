@@ -2,6 +2,8 @@ import './header.scss';
 import React from 'react';
 import Immutable from 'immutable';
 import Radio from '../radio/radio.jsx';
+import navigationEnums from '../../enums/navigation';
+import MaterialIcon from '../materialIcon/materialIcon.jsx';
 
 export default class HeaderContainer extends React.Component {
     constructor(props) {
@@ -13,21 +15,25 @@ export default class HeaderContainer extends React.Component {
     }
 
     onToggle(e) {
-        this.props.changeSelectedView(+e.target.value, this.props.selected);
+        this.props.updateTypeIdx(+e.target.value);
     }
 
     makeRadioBtns() {
         let radioBtns = this.props.types.map((type, idx) => {
-            return <Radio
-                      key={type}
-                      name="viewType"
-                      value={idx}
-                      text={type}
-                      onToggle={this.onToggle.bind(this)}
-                      checked={idx === this.props.selected} />;
+            return this.makeRadioBtn(type, idx);
         });
 
         return <div className="header-inputs">{radioBtns}</div>;
+    }
+
+    makeRadioBtn(type, idx) {
+        return <Radio
+                  key={type}
+                  value={idx}
+                  text={type}
+                  name="viewType"
+                  onToggle={this.onToggle.bind(this)}
+                  checked={idx === this.props.typeIdx} />
     }
 
     onClick() {
@@ -40,12 +46,20 @@ export default class HeaderContainer extends React.Component {
 
     onKeyDown(e) {
         if (e && e.keyCode === 13) {
-            this.setState({
-                isEditing: !this.state.isEditing
-            });
-
-            this.props.updateCalendarName(this.refs.calendarName.value);
+            this.updateCalendarName();
         }
+    }
+
+    onInputBlur() {
+        this.updateCalendarName();
+    }
+
+    updateCalendarName() {
+        this.setState({
+            isEditing: !this.state.isEditing
+        });
+
+        this.props.updateCalendarName(this.refs.calendarName.value);
     }
 
     renderName() {
@@ -57,16 +71,17 @@ export default class HeaderContainer extends React.Component {
                     <input
                       ref="calendarName"
                       autoFocus type="text"
-                      placeholder={this.props.name} />
+                      onBlur={this.onInputBlur.bind(this)} />
                 </div>
             );
         }
 
         return (
             <div
+              title="Click to rename calendar"
               onClick={this.onClick.bind(this)}
               className="header-calendar-name">
-                {this.props.name} <i className="material-icons">create</i>
+                {this.props.name} <MaterialIcon icon="create" />
             </div>
         );
     }
@@ -83,12 +98,15 @@ export default class HeaderContainer extends React.Component {
 
 HeaderContainer.propTypes = {
     name: React.PropTypes.string,
-    selected: React.PropTypes.number,
+    updateTypeIdx: React.PropTypes.func,
+    updateCalendarName: React.PropTypes.func,
+    typeIdx: React.PropTypes.number.isRequired,
     types: React.PropTypes.instanceOf(Immutable.List)
 };
 
 HeaderContainer.defaultProps = {
-    selected: 0,
     name: 'Untitled Calendar',
-    types: Immutable.List([ 'calendar', 'courses' ])
+    updateTypeIdx: function() {},
+    updateCalendarName: function() {},
+    types: Immutable.List([ navigationEnums.COURSES, navigationEnums.CALENDAR ])
 };

@@ -1,0 +1,66 @@
+.calcourse-container {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 180px;
+  max-height: 180px;
+  flex-flow: column nowrap;
+}
+
+.calcourse-container--non {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  i.material-icons {
+    font-size: 120px;
+  }
+}
+
+.calcourse-row {
+  display: flex;
+  padding: 20px;
+  flex: 1 1 auto;
+  border-radius: 3px;
+  margin-bottom: 7px;
+  align-items: center;
+  border: 1px solid rgba(139, 130, 134, 0.3);
+  background-color: rgba(139, 130, 134, 0.03);
+
+  &:hover {
+    border: 1px solid rgba(139, 130, 134, 0.6);
+  }
+
+  i.material-icons {
+    opacity: 0.7;
+    font-size: 50px;
+    margin-right: 25px;
+  }
+}
+
+.calcourse-time {
+  font-size: 13px;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(139, 130, 134, 0.3);
+}
+
+.calcourse-actions {
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  i.material-icons {
+    opacity: 0.7;
+    font-size: 20px;
+    margin-top: 5px;
+    user-select: none;
+
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+}

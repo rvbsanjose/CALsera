@@ -50,7 +50,7 @@ module.exports = {
             names: [ 'vendor' ]
         }),
         new HtmlwebpackPlugin({
-            title: 'CALsera',
+            title: 'CALsera - Track your Coursera week.',
             inject: false,
             template: './src/index.html'
         })

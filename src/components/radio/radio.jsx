@@ -18,14 +18,13 @@ export default class Radio extends React.Component {
 }
 
 Radio.propTypes = {
-    name: React.PropTypes.string,
-    value: React.PropTypes.number,
-    checked: React.PropTypes.bool,
-    onToggle: React.PropTypes.func
+    onToggle: React.PropTypes.func,
+    text: React.PropTypes.string.isRequired,
+    name: React.PropTypes.string.isRequired,
+    value: React.PropTypes.number.isRequired,
+    checked: React.PropTypes.bool.isRequired
 };
 
 Radio.defaultProps = {
-    name: '',
-    value: '',
     onToggle: function() {}
 };

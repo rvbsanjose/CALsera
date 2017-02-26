@@ -4,7 +4,7 @@
   "description": "A calendar and schedule for your Coursera courses",
   "main": "src/main.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --open --inline --hot"
+    "start": "node_modules/.bin/webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -36,9 +36,11 @@
   "dependencies": {
     "immutable": "^3.8.1",
     "keymirror": "^0.1.1",
+    "moment": "^2.17.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   }
 }

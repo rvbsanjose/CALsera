@@ -1,0 +1,8 @@
+.presentation-container {
+  padding: 10px;
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+  overflow-y: scroll;
+  flex-flow: column nowrap;
+}

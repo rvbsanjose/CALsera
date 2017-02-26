@@ -1,0 +1,11 @@
+.coursera-container {
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(139, 130, 134, 0.3);
+  background-color: rgba(139, 130, 134, 0.03);
+
+  &:hover {
+    border: 1px solid rgba(139, 130, 134, 0.6);
+  }
+}

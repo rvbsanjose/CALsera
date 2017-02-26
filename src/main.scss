@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 html, body {
   margin: 0;
+  height: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: column nowrap;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#calsera-app {
   height: 100%;
 }

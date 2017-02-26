@@ -1,6 +1,8 @@
 import keymirror from 'keymirror';
 
 export default keymirror({
-    CHANGE_SELECTED_VIEW: null,
-    UPDAATE_CALENDAR_NAME: null
+    TOGGLE_TODAY: null,
+    UPDATE_ACTIVE_DAY: null,
+    UPDATE_ACTIVE_WEEK: null,
+    UPDATE_CALENDAR_NAME: null
 });
