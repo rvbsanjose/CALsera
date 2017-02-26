@@ -1,0 +1,29 @@
+.day-container {
+  display: flex;
+  padding: 10px;
+  flex: 1 1 auto;
+  max-height: 60px;
+  justify-content: center;
+  flex-flow: column nowrap;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(240, 242, 218, 0.3);
+  }
+}
+
+.day-container--active {
+  background-color: rgba(240, 242, 218, 0.5);
+  border-right: 3px solid rgba(242, 60, 85, 0.7);
+}
+
+.day-courses {
+  display: flex;
+  align-items: center;
+
+  i.material-icons {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+}

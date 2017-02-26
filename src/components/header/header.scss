@@ -2,23 +2,27 @@
   color: white;
   padding: 20px;
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   background-color: rgba(160, 200, 195, 1);
+  box-shadow: 1px 0 5px rgba(227, 168, 163, 05);
 }
 
 .header-inputs {
   top: 20px;
-  width: 100%;
   display: flex;
   flex: 1 1 auto;
-  position: absolute;
-  justify-content: center;
+  justify-content: flex-end;
+
+  input[type="radio"]:hover {
+    cursor: pointer;
+  }
 }
 
 .header-calendar-name {
   z-index: 1;
   display: flex;
   min-height: 20px;
+  align-items: center;
   text-transform: capitalize;
 
   .material-icons {
@@ -33,6 +37,7 @@
     font-size: 14px;
     line-height: 18px;
     background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
 }
 

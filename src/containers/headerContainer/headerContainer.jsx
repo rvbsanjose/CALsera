@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as calendarActions from '../../actions/calendar';
 import Header from '../../components/header/header.jsx';
+import * as calendarActions from '../../actions/calendar';
+import * as navigationActions from '../../actions/navigation';
 
 class HeaderContainer extends React.Component {
     render() {
@@ -13,19 +14,19 @@ class HeaderContainer extends React.Component {
 function mapStateToProps(store) {
     return {
         name: store.calendar.get('name'),
-        types: store.calendar.get('types'),
-        selected: store.calendar.get('selected')
+        types: store.navigation.get('types'),
+        typeIdx: store.navigation.get('typeIdx')
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        changeSelectedView(idx, curr) {
+        updateTypeIdx(idx, curr) {
             if (idx === curr) {
                 return;
             }
 
-            dispatch(calendarActions.changeSelectedView(idx));
+            dispatch(navigationActions.updateTypeIdx(idx));
         },
 
         updateCalendarName(name) {

@@ -13,21 +13,25 @@ export default class HeaderContainer extends React.Component {
     }
 
     onToggle(e) {
-        this.props.changeSelectedView(+e.target.value, this.props.selected);
+        this.props.updateTypeIdx(+e.target.value, this.props.typeIdx);
     }
 
     makeRadioBtns() {
         let radioBtns = this.props.types.map((type, idx) => {
-            return <Radio
-                      key={type}
-                      name="viewType"
-                      value={idx}
-                      text={type}
-                      onToggle={this.onToggle.bind(this)}
-                      checked={idx === this.props.selected} />;
+            return this.makeRadioBtn(type, idx);
         });
 
         return <div className="header-inputs">{radioBtns}</div>;
+    }
+
+    makeRadioBtn(type, idx) {
+        return <Radio
+                  key={type}
+                  value={idx}
+                  text={type}
+                  name="viewType"
+                  onToggle={this.onToggle.bind(this)}
+                  checked={idx === this.props.typeIdx} />
     }
 
     onClick() {
@@ -56,8 +60,7 @@ export default class HeaderContainer extends React.Component {
                   className="header-calendar-name">
                     <input
                       ref="calendarName"
-                      autoFocus type="text"
-                      placeholder={this.props.name} />
+                      autoFocus type="text" />
                 </div>
             );
         }
@@ -83,12 +86,12 @@ export default class HeaderContainer extends React.Component {
 
 HeaderContainer.propTypes = {
     name: React.PropTypes.string,
-    selected: React.PropTypes.number,
+    typeIdx: React.PropTypes.number,
     types: React.PropTypes.instanceOf(Immutable.List)
 };
 
 HeaderContainer.defaultProps = {
-    selected: 0,
+    typeIdx: 0,
     name: 'Untitled Calendar',
     types: Immutable.List([ 'calendar', 'courses' ])
 };

@@ -1,0 +1,25 @@
+.course-container {
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(139, 130, 134, 0.3);
+  background-color: rgba(139, 130, 134, 0.03);
+}
+
+.course-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.course-instructor, .course-time {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  margin-bottom: 20px;
+
+  i.material-icons {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}
