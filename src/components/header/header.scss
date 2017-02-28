@@ -4,12 +4,16 @@
   display: flex;
   flex: 1 0 auto;
   justify-content: space-between;
-  background-color: rgba(25, 52, 65, 0.7);
+  background-color: rgba(25, 52, 65, 0.5);
   box-shadow: 1px 0 5px rgba(25, 52, 65, 1);
 }
 
 .header-inputs {
   display: flex;
+
+  input[type="radio"]:hover {
+    cursor: pointer;
+  }
 }
 
 .header-calendar-name {

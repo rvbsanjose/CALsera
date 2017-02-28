@@ -7,7 +7,7 @@
   flex-flow: column nowrap;
   width: calc(100% - 55px);
   border: 1px solid rgba(145, 170, 157, 0.5);
-  background-color: rgba(145, 170, 157, 0.05);
+  background-color: rgba(145, 170, 157, 0.03);
 
   &:hover {
     border: 1px solid rgba(145, 170, 157, 0.8);
@@ -22,7 +22,7 @@
 
   i.material-icons {
     opacity: 0.7;
-    font-size: 30px;
+    font-size: 20px;
     margin-right: 5px;
   }
 }
