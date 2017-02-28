@@ -28,6 +28,7 @@ function mapDispatchToProps(dispatch) {
 
         toggleToday() {
             dispatch(calendarActions.toggleToday());
+            dispatch(navigationActions.updateTypeIdx(0));
         }
     };
 }

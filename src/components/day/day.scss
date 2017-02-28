@@ -10,13 +10,13 @@
 
   &:hover {
     cursor: pointer;
-    background-color: rgba(240, 242, 218, 0.3);
+    background-color: rgba(25, 52, 65, 0.03);
   }
 }
 
 .day-container--active {
-  background-color: rgba(240, 242, 218, 0.5);
-  border-right: 3px solid rgba(242, 60, 85, 0.7);
+  background-color: rgba(25, 52, 65, 0.04);
+  border-right: 3px solid rgba(242, 56, 90, 1);
 }
 
 .day-courses {

@@ -1,0 +1,18 @@
+.time-container {
+  display: flex;
+  flex: 1 1 auto;
+  font-size: 12px;
+  height: 80px;
+  align-items: center;
+}
+
+.time-slot {
+  min-width: 30px;
+  margin-right: 10px;
+}
+
+.time-divider {
+  display: flex;
+  flex: 1 1 auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}

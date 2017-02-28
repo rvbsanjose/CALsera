@@ -54,9 +54,9 @@ export default class Day extends React.Component {
 }
 
 Day.propTypes = {
+    activeDay: React.PropTypes.number,
     onToggleDay: React.PropTypes.func,
     idx: React.PropTypes.number.isRequired,
-    activeDay: React.PropTypes.number.isRequired,
     day: React.PropTypes.instanceOf(Immutable.Record)
 };
 
