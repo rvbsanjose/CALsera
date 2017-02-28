@@ -4,11 +4,6 @@ import Immutable from 'immutable';
 import MaterialIcon from '../materialIcon/materialIcon.jsx';
 
 export default class CalCourse extends React.Component {
-    makeCourseTime() {
-        return `${this.props.course.days.join(', ')} from ` +
-            `${this.props.course.time.join(' to ')}`;
-    }
-
     removeCourseFromWeek() {
         this.props.removeCourseFromWeek({
             id: this.props.course.id,
@@ -27,17 +22,25 @@ export default class CalCourse extends React.Component {
                 onCallback={this.removeCourseFromWeek.bind(this)} />;
     }
 
+    timeDifference() {
+        return this.props.course.timeIndex.get(1) -
+            this.props.course.timeIndex.get(0);
+    }
+
+    position() {
+        return {
+            top: ((this.props.course.timeIndex.get(0) - 7) * 80) + 43,
+            height: (this.timeDifference() * 80) - 7
+        };
+    }
+
     render() {
         if (!this.props.course) {
-            return (
-                <div className="calcourse-container calcourse-container--non">
-                    <MaterialIcon icon="highlight_off" />
-                </div>
-            );
+            return null;
         }
 
         return (
-            <div className="calcourse-container">
+            <div className="calcourse-container" style={this.position()}>
                 <div className="calcourse-actions">
                     {this.makeRemoveBtn()}
                 </div>
@@ -46,9 +49,6 @@ export default class CalCourse extends React.Component {
                     <div className="calcourse-name">
                         {this.props.course.name}
                     </div>
-                </div>
-                <div className="calcourse-time">
-                    {this.makeCourseTime()}
                 </div>
             </div>
         );

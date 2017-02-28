@@ -68,10 +68,10 @@ export default class Calendar extends React.Component {
 }
 
 Calendar.propTypes = {
+    activeDay: React.PropTypes.number,
     toggleToday: React.PropTypes.func,
     updateActiveDay: React.PropTypes.func,
     updateActiveWeek: React.PropTypes.func,
-    activeDay: React.PropTypes.number.isRequired,
     activeWeek: React.PropTypes.number.isRequired,
     week: React.PropTypes.instanceOf(Immutable.List)
 };

@@ -1,6 +1,7 @@
 import './cal.scss';
 import React from 'react';
 import Immutable from 'immutable';
+import Timeslot from '../timeslot/timeslot.jsx';
 import Calcourse from '../calCourse/calCourse.jsx';
 
 export default class Cal extends React.Component {
@@ -19,9 +20,20 @@ export default class Cal extends React.Component {
         }, []);
     }
 
+    makeTimeSlots() {
+        let slots = [];
+
+        for (let i = 7; i <= 19; i++) {
+            slots.push(<Timeslot key={`time-${i}`} hour={i} />);
+        }
+
+        return slots;
+    }
+
     render() {
         return (
             <div className="cal-container">
+                {this.makeTimeSlots()}
                 {this.makeScheduledCourses()}
             </div>
         );
