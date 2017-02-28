@@ -3,6 +3,7 @@
   width: 300px;
   display: flex;
   flex: 0 0 auto;
+  max-width: 300px;
   overflow: hidden;
   overflow-y: scroll;
   flex-flow: column nowrap;
@@ -15,18 +16,12 @@
   padding: 10px 2px;
   align-items: center;
   justify-content: space-between;
-
-  i:hover {
-    opacity: 0.5;
-    cursor: pointer;
-    user-select: none;
-  }
 }
 
 .calendar-today {
   display: flex;
   padding: 2px 5px;
-  font-size: 10px;
+  font-size: 0.7em;
   border-radius: 3px;
   align-items: center;
   border: 1px solid black;
@@ -36,6 +31,6 @@
   }
 
   i.material-icons {
-    font-size: 13px;
+    font-size: 1.4em;
   }
 }

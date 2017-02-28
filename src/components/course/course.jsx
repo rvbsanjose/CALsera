@@ -20,34 +20,26 @@ export default class Course extends React.Component {
         };
     }
 
-    addCourseToWeek() {
-        this.props.addCourseToWeeks(this.makeCoursePayload());
-    }
-
-    removeCourseFromWeek() {
-        this.props.removeCourseFromWeek(this.makeCoursePayload());
-    }
-
-    makeAddBtn() {
+    onClickActionIcon() {
         if (this.props.enrolledCourses.has(`course-${this.props.course.id}`)) {
-            return;
+            return this.props.removeCourseFromWeek(this.makeCoursePayload());
+        }
+
+        return this.props.addCourseToWeeks(this.makeCoursePayload());
+    }
+
+    makeActionIconBtn() {
+        if (this.props.enrolledCourses.has(`course-${this.props.course.id}`)) {
+            return <MaterialIcon
+                    icon="close"
+                    title="Remove course"
+                    onCallback={this.onClickActionIcon.bind(this)} />;
         }
 
         return <MaterialIcon
                 icon="note_add"
                 title="Add course"
-                onCallback={this.addCourseToWeek.bind(this)} />;
-    }
-
-    makeRemoveBtn() {
-        if (!this.props.enrolledCourses.has(`course-${this.props.course.id}`)) {
-            return;
-        }
-
-        return <MaterialIcon
-                icon="close"
-                title="Remove course"
-                onCallback={this.removeCourseFromWeek.bind(this)} />;
+                onCallback={this.onClickActionIcon.bind(this)} />;
     }
 
     makeSchoolIcon() {
@@ -62,8 +54,7 @@ export default class Course extends React.Component {
         return (
             <div className="course-container">
                 <div className="course-actions">
-                    {this.makeAddBtn()}
-                    {this.makeRemoveBtn()}
+                    {this.makeActionIconBtn()}
                 </div>
                 <div className="course-name">
                     {this.props.course.name}

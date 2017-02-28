@@ -29,8 +29,8 @@ export default class CalCourse extends React.Component {
 
     position() {
         return {
-            top: ((this.props.course.timeIndex.get(0) - 7) * 80) + 43,
-            height: (this.timeDifference() * 80) - 7
+            height: (this.timeDifference() * 80) - 7,
+            top: ((this.props.course.timeIndex.get(0) - 7) * 80) + 43
         };
     }
 
@@ -41,13 +41,13 @@ export default class CalCourse extends React.Component {
 
         return (
             <div className="calcourse-container" style={this.position()}>
-                <div className="calcourse-actions">
-                    {this.makeRemoveBtn()}
-                </div>
                 <div className="calcourse-row">
-                    <MaterialIcon icon="schedule" />
                     <div className="calcourse-name">
+                        <MaterialIcon icon="schedule" />
                         {this.props.course.name}
+                    </div>
+                    <div className="calcourse-actions">
+                        {this.makeRemoveBtn()}
                     </div>
                 </div>
             </div>

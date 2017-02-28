@@ -3,6 +3,7 @@
   padding: 20px;
   display: flex;
   flex: 1 0 auto;
+  font-size: 1em;
   justify-content: space-between;
   background-color: rgba(25, 52, 65, 0.5);
   box-shadow: 1px 0 5px rgba(25, 52, 65, 1);
@@ -24,7 +25,7 @@
   text-transform: capitalize;
 
   i.material-icons {
-    font-size: 16px;
+    font-size: 1.2em;
     padding-left: 5px;
   }
 
@@ -32,7 +33,7 @@
     color: white;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 1em;
     line-height: 18px;
     background: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);

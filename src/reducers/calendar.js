@@ -4,12 +4,12 @@ import calendarEnums from '../enums/calendar';
 import calendarRecord from '../records/calendar';
 
 function makeInitialState() {
-    return Immutable.Map(calendarRecord({
+    return calendarRecord({
         active: {
             day: moment().day(),
             week: moment().week()
         }
-    }));
+    });
 }
 
 function updateCalendarName(state, action) {

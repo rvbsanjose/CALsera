@@ -2,7 +2,7 @@
 > CALsera is a take home assignment for Coursera which was developed part time
 over a course of 3 - 4 days.
 
-![](https://github.com/rvbsanjose/CALsera/blob/master/Screen%20Shot%202017-02-27%20at%2011.27.58%20PM.png)
+![](https://github.com/rvbsanjose/CALsera/blob/master/Screen%20Shot%202017-02-28%20at%2010.34.36%20PM.png)
 
 ## What does CALsera do?
 > CALsera is a way to track your weekly schedule, showing what potential schedule conflicts you would have if you enrolled in Coursera courses.

@@ -1,5 +1,6 @@
 import React from 'react';
 import './calContainer.scss';
+import Immutable from 'immutable';
 import { connect } from 'react-redux';
 import Cal from '../../components/cal/cal.jsx';
 import * as weeksActions from '../../actions/weeks';
@@ -24,6 +25,10 @@ function mapDispatchToProps(dispatch) {
 }
 
 function sortActiveDay(state, activeWeek, activeDay) {
+    if (!activeDay) {
+        return Immutable.OrderedMap();
+    }
+
     return state.weeks.getIn([ `week-${activeWeek}`, activeDay, 'courses' ])
         .sortBy(course => course.timeIndex.get(0));
 }

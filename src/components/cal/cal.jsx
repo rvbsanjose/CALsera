@@ -1,4 +1,3 @@
-import './cal.scss';
 import React from 'react';
 import Immutable from 'immutable';
 import Timeslot from '../timeslot/timeslot.jsx';
@@ -7,7 +6,7 @@ import Calcourse from '../calCourse/calCourse.jsx';
 export default class Cal extends React.Component {
     makeScheduledCourses() {
         if (!this.props.schedule.size) {
-            return <Calcourse />;
+            return null;
         }
 
         return this.props.schedule.reduce((accum, course) => {

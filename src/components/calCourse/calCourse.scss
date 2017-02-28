@@ -17,33 +17,19 @@
 .calcourse-row {
   display: flex;
   flex: 0 0 auto;
+  font-size: 0.9em;
   align-items: center;
   padding: 2px 0 0 2px;
+  justify-content: space-between;
 
   i.material-icons {
-    opacity: 0.7;
-    font-size: 20px;
+    font-size: 1.2em;
     margin-right: 5px;
   }
 }
 
 .calcourse-name {
-  font-size: 14px;
-}
-
-.calcourse-actions {
-  top: 5px;
-  right: 5px;
-  position: absolute;
-
-  i.material-icons {
-    opacity: 0.7;
-    font-size: 13px;
-    user-select: none;
-
-    &:hover {
-      opacity: 0.6;
-      cursor: pointer;
-    }
-  }
+  display: flex;
+  font-size: 1em;
+  align-items: center;
 }

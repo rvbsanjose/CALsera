@@ -5,10 +5,31 @@ html, body {
   height: 100%;
   display: flex;
   flex: 1 1 auto;
+  font-size: 14px;
   flex-flow: column nowrap;
   font-family: 'Open Sans', sans-serif;
 }
 
 #calsera-app {
   height: 100%;
+}
+
+i.material-icons {
+  opacity: 0.7;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  10% { opacity: 0.1; }
+  20% { opacity: 0.2; }
+  40% { opacity: 0.4; }
+  60% { opacity: 0.6; }
+  80% { opacity: 0.8; }
+  100% { opacity: 1; }
 }
