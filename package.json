@@ -4,7 +4,8 @@
   "description": "A calendar and schedule for your Coursera courses",
   "main": "src/main.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --inline --hot"
+    "start": "node_modules/.bin/webpack-dev-server --env=dev",
+    "build:prod": "node_modules/.bin/webpack --env=prod --progress --profile --colors --define process.env.NODE_ENV='production'"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-1": "^6.22.0",
     "css-loader": "^0.26.2",
+    "extract-text-webpack-plugin": "^2.0.0",
     "html-webpack-plugin": "^2.28.0",
     "node-sass": "^4.5.0",
     "path": "^0.12.7",
