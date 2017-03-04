@@ -7,6 +7,9 @@ over a course of 3 - 4 days.
 ## What does CALsera do?
 > CALsera is a way to track your weekly schedule, showing what potential schedule conflicts you would have if you enrolled in Coursera courses.
 
+## Has it been deployed
+> Yes. You can test CALsera online at https://rvbsanjose.github.io/CALsera. Remember, this is only a test project and not meant to be full fledge production product.
+
 ## Is there a sprint board?
 Yes. You can find the ongoing sprint board at https://github.com/rvbsanjose/CALsera/projects/1. It is meant to mimick a Jira board of tickets (Github issues) moving from left to right, TODO -> In Progress -> Ready for Code Review -> Done.
 
